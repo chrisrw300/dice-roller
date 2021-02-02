@@ -1,14 +1,7 @@
 // variables
 let diceContainer = document.querySelector('#dice-container');
+const btnGroup = document.querySelector('#btn-group')
 const btn = document.querySelector('#btn');
-
-// dice at start
-const imgDiv1 = document.createElement('div');
-imgDiv1.innerHTML = '<img src="../assets/img/dice-five.png" alt="dice"/>';
-const imgDiv2 = document.createElement('div');
-imgDiv2.innerHTML = '<img src="../assets/img/dice-six.png" alt="dice"/>';
-diceContainer.appendChild(imgDiv1);
-diceContainer.appendChild(imgDiv2);
 
 
 // number generator
@@ -27,45 +20,9 @@ function numberGen() {
 // display dice based on rolls
 function displayDice(diceNumber1, diceNumber2) {
     
-    // dice 1 rolls
-    if (diceNumber1 === '1') {
-        console.log('1');
-    } else if (diceNumber1 === '2') {
-        console.log('2')
-    } else if (diceNumber1 === '3') {
-        console.log('3')
-    } else if (diceNumber1 === '4') {
-        console.log('4')
-    } else if (diceNumber1 === '5') {
-        console.log('5')
-    } else if (diceNumber1 === '6') {
-        console.log('6')
-    } else {
-        console.log('no')
-    }
-
-    // dice 2 rolls
-    if (diceNumber2 === '1') {
-        console.log('1');
-    } else if (diceNumber2 === '2') {
-        console.log('2')
-    } else if (diceNumber2 === '3') {
-        console.log('3')
-    } else if (diceNumber2 === '4') {
-        console.log('4')
-    } else if (diceNumber2 === '5') {
-        console.log('5')
-    } else if (diceNumber2 === '6') {
-        console.log('6')
-    } else {
-        console.log('no')
-    }
+    const dice1 = document.querySelector('#dice-1').setAttribute("src", "./assets/img/dice-" + diceNumber1 + '.png');
+    const dice2 = document.querySelector('#dice-2').setAttribute("src", "./assets/img/dice-" + diceNumber2 + '.png');;
+    
 }
-
-
-// add styles to dice if snake eyes is rolled
-
-
-
 // function start
 btn.addEventListener('click', numberGen);
