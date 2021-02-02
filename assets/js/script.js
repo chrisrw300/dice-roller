@@ -3,6 +3,7 @@ let diceContainer = document.querySelector('#dice-container');
 let snakeEyes = document.querySelector('.snake-eyes');
 let diceTotal = document.querySelector('#dice-total');
 const btn = document.querySelector('#btn');
+const rollHisEl = document.querySelector('#roll-history');
 
 // number generator
 function numberGen() {
@@ -24,16 +25,11 @@ function displayDice(diceNumber1, diceNumber2) {
     
     // if snake eyes are rolled, display box shadow
     if (diceNumber1 === diceNumber2) {
-        document.querySelector('#dice-1').style.boxShadow = "0 0 25px red"
-        document.querySelector('#dice-2').style.boxShadow = "0 0 25px red"
-
-        snakeEyes.classList.remove('hidden');
-
+        document.querySelector('#dice-1').style.boxShadow = "0 0 25px blue"
+        document.querySelector('#dice-2').style.boxShadow = "0 0 25px blue"
     } else {
         document.querySelector('#dice-1').style.boxShadow = "none"
         document.querySelector('#dice-2').style.boxShadow = "none"
-
-        snakeEyes.classList.add('hidden');
     }
 
     // parse string to add up as integers
@@ -42,6 +38,16 @@ function displayDice(diceNumber1, diceNumber2) {
 
     // total of dice
     diceTotal.innerHTML = totalNumber1 + totalNumber2;
+
+    // roll history function
+    rollHistory(totalNumber1, totalNumber2);
 }
+
+function rollHistory(totalNumber1, totalNumber2) {
+    let liEl = document.createElement('li');
+    liEl.innerHTML = `${totalNumber1} & ${totalNumber2}`;
+    rollHisEl.appendChild(liEl);
+}
+
 // function start
 btn.addEventListener('click', numberGen);

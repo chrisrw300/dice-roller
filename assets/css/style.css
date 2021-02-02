@@ -9,10 +9,10 @@
 
 header {
     display: block;
+    text-align: center;
 }
 h1 {
     font-size: 50px;
-    text-align: center;
 }
 
 main {
@@ -31,11 +31,12 @@ main {
     transition: 0.3s;
     margin: 0 55px;
     border-radius: 10px;
+    padding: 0;
 }
 
-.total-wrapper, .snake-eyes {
+.total-wrapper {
     text-align: center;
-    margin: 15px;
+    margin: 25px;
 }
 
 .btn-wrapper {
@@ -53,4 +54,32 @@ button {
 }
 button:focus {
     outline: none;
+}
+
+.roll-history-wrapper {
+    text-align: center;
+}
+.roll-history-wrapper h2 {
+    border-bottom: thin solid black;
+    width: 15%;
+    margin: 20px auto
+}
+#roll-history {
+    overflow-y: scroll;
+    width: 15%;
+    height: 200px;
+    margin: 0 auto;
+}
+#roll-history li {
+    border-bottom: thin solid black;
+    padding: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: black;
+    color: white;
 }

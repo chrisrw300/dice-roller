@@ -11,14 +11,12 @@
 <body>
     <header>
         <h1>Dice Roller</h1>
+        <p>If the dice turn blue, you got snake eyes!</p>
     </header>
     <main>
         <section id="dice-container">
             <img src="./assets/img/dice-1.png" alt="dice-one" id="dice-1">
             <img src="./assets/img/dice-1.png" alt="dice-one" id="dice-2">
-        </section>
-        <section class="snake-eyes hidden">
-            <p>You got snake eyes!</p>
         </section>
         <section class="total-wrapper">
             <p>The total of the dice are: <span id="dice-total"></span></p>
@@ -26,7 +24,13 @@
         <div class="btn-wrapper">
             <button id="btn">Roll Dice</button>
         </div>
+        <section class="roll-history-wrapper">
+            <h2>Roll History</h2>
+            <ul id="roll-history">
+            </ul>
+        </section>
     </main>
+    <footer>&copy; Christopher Walston 2021</footer>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
