@@ -1,5 +1,14 @@
 // variables
+let diceContainer = document.querySelector('#dice-container');
+const btn = document.querySelector('#btn');
 
+// dice at start
+const imgDiv1 = document.createElement('div');
+imgDiv1.innerHTML = '<img src="../assets/img/dice-five.png" alt="dice"/>';
+const imgDiv2 = document.createElement('div');
+imgDiv2.innerHTML = '<img src="../assets/img/dice-six.png" alt="dice"/>';
+diceContainer.appendChild(imgDiv1);
+diceContainer.appendChild(imgDiv2);
 
 
 // number generator
@@ -22,4 +31,4 @@ function numberGen() {
 
 
 // function start
-numberGen();
+btn.addEventListener('click', numberGen);
