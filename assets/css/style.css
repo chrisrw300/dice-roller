@@ -2,3 +2,54 @@
     margin: 0;
     padding: 0;
 }
+.hidden {
+    display: none;
+}
+
+header {
+    display: block;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#dice-container {
+    margin: 55px auto 0 auto;
+    width: 25%;
+}
+
+#dice-1,
+#dice-2 {
+    width: 25%;
+    transition: 0.3s;
+    margin: 0 55px;
+    border-radius: 10px;
+}
+
+.total-wrapper, .snake-eyes {
+    text-align: center;
+    margin: 15px;
+}
+
+.btn-wrapper {
+    width: 25%;
+    margin: 25px auto;
+}
+button {
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+button:focus {
+    outline: none;
+}
