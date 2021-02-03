@@ -11,16 +11,17 @@
 <body>
     <header>
         <h1>Dice Roller</h1>
-        <p>If the dice turn blue, you got snake eyes!</p>
+        <p>If the dice background turns blue, you got doubles!</p>
     </header>
     <main>
+        <section class="total-wrapper">
+            <p>The total of the dice are: <span id="dice-total"></span></p>
+        </section>
         <section id="dice-container">
             <img src="./assets/img/dice-1.png" alt="dice-one" id="dice-1">
             <img src="./assets/img/dice-1.png" alt="dice-one" id="dice-2">
         </section>
-        <section class="total-wrapper">
-            <p>The total of the dice are: <span id="dice-total"></span></p>
-        </section>
+        
         <div class="btn-wrapper">
             <button id="btn">Roll Dice</button>
         </div>

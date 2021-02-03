@@ -47,6 +47,7 @@ function rollHistory(totalNumber1, totalNumber2) {
     let liEl = document.createElement('li');
     liEl.innerHTML = `${totalNumber1} & ${totalNumber2}`;
     rollHisEl.appendChild(liEl);
+
 }
 
 // function start
