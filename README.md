@@ -10,6 +10,9 @@
 * [Future Developments](#futuredevelopments)
 * [Questions](#questions)
 
+## Attention!!
+This app is being converted to a React app to handle multiple dice, app function, and more! Stay Tuned.
+
 ## Description:
 This simple web application can be used for a variety of games, including Catan! 
 Any game that requires dice can be used alongside this application. 
